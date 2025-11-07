@@ -6,5 +6,5 @@ Cada tecla está asociada a un sonido diferente, logrando una experiencia intera
 
 # Día 2 - Reloj | #30-Días-de-JS
 ## Descripción
-En este proyecto, se genera un reloj digital que muestra la hora actual en formato HH:MM:SS.
+En este día, se genera un reloj digital que muestra la hora actual en formato HH:MM:SS.
 
