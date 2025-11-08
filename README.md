@@ -8,3 +8,8 @@ Cada tecla está asociada a un sonido diferente, logrando una experiencia intera
 ## Descripción
 En este día, se genera un reloj digital que muestra la hora actual en formato HH:MM:SS.
 
+# Día 3 - Array | #30-Días-de-JS
+## Descripción
+Hoy, se aprendio el uso de reduce, sort, map y filter, en los cuales filtran de manera diferente los datos.
+
+
