@@ -8,7 +8,11 @@ Cada tecla está asociada a un sonido diferente, logrando una experiencia intera
 ## Descripción
 En este día, se genera un reloj digital que muestra la hora actual en formato HH:MM:SS.
 
-# Día 3 - Array | #30-Días-de-JS
+# Día 3 - Css variable | #30-Días-de-JS
+## Descripción
+El dia de hoy, se aprendio la manera de hacer como realizar un css variable aplicando el uso de js
+
+# Día 4 - Array | #30-Días-de-JS
 ## Descripción
 Hoy, se aprendio el uso de reduce, sort, map y filter, en los cuales filtran de manera diferente los datos.
 
