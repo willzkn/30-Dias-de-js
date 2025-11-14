@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mantener presionado el Shift</title>
+</head>
+<body>
+  <style>
+
+    html {
+      font-family: sans-serif;
+      background: #ffc600;
+    }
+
+    .inbox {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #F1F1F1;
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+    }
+
+    input:checked + p {
+      background: #F9F9F9;
+      text-decoration: line-through;
+    }
+
+    input[type="checkbox"] {
+      margin: 20px;
+    }
+
+    p {
+      margin: 0;
+      padding: 20px;
+      transition: background 0.2s;
+      flex: 1;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+      border-left: 1px solid #D1E2FF;
+    }
+  </style>
+
+<div class="inbox">
+  <div class="item">
+    <input type="checkbox">
+    <p>Este es un diseño de bandeja de entrada.</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>Marca un ítem</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>Mantén presionada la tecla Shift</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>Marca un ítem más abajo</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>Todo lo que esté entre ambos también debería marcarse</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>Intenta hacerlo sin ninguna librería</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>Solo JavaScript común</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>¡Buena suerte!</p>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <p>¡No olvides tuitear tu resultado!</p>
+  </div>
+</div>
+
+
+<script>
+    const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+    
+    let lastChecked;
+
+    function handleCheck(e){
+        //Verificar si tiene el boton "Shift" presionado
+        let inBetween = false;
+        if (e.shiftKey && this.checked) {
+            // un loop en cada caja
+            checkboxes.forEach(checkbox => {
+                console.log(checkbox);
+                if (checkbox === this || checkbox === lastChecked) {
+                    inBetween =!inBetween;
+                    console.log('Esta dentro de las marcadas');
+                }
+
+                if (inBetween) {
+                    checkbox.checked = true;
+                }
+            });
+        }
+        
+        lastChecked = this;
+    }
+    checkboxes.forEach(checkbox =>checkbox.addEventListener('click',handleCheck));
+
+
+
+</script>
+</body>
+</html>
